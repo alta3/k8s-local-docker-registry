@@ -1,6 +1,6 @@
 #REPO_HOST=docker.io
-REPO_HOST=127.0.0.1:5000
-IMAGE_NAME:=${REPO_HOST}/seldonio/nginx_test
+REPO_HOST=127.0.0.1:30500
+IMAGE_NAME:=${REPO_HOST}/alta3/nginx_test
 
 build_image:
 	docker build --force-rm=true -t $(IMAGE_NAME) .

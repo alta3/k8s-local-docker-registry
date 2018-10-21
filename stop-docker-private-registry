@@ -5,5 +5,5 @@ set -o errexit
 set -o pipefail
 
 kubectl delete -f docker-private-registry.json --ignore-not-found=true -n default
-kubectl delete -f docker-private-registry-proxy.json --ignore-not-found=true -n default
+#kubectl delete -f docker-private-registry-proxy.json --ignore-not-found=true -n default
 

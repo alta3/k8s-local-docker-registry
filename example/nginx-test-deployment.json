@@ -15,7 +15,7 @@
             "spec": {
                 "containers": [
                     {
-                        "image": "127.0.0.1:5000/seldonio/nginx_test",
+                        "image": "127.0.0.1:30500/alta3/nginx_test",
                         "name": "nginx-test"
                     }
                 ]
