@@ -9,10 +9,10 @@ push_to_registry:
 	@docker push $(IMAGE_NAME)
 
 create_deployment:
-	@kubectl apply -f nginx-test-deployment.json -n default
+	@kubectl apply -f nginx-test-deployment.yaml -n default
 
 delete_deployment:
-	@kubectl delete -f nginx-test-deployment.json --ignore-not-found -n default
+	@kubectl delete -f nginx-test-deployment.yaml --ignore-not-found -n default
 
 port-forward-docker-registry:
 	@POD_NAME=$$(kubectl get pods -l app=docker-private-registry -n default | sed -e '1d'|awk '{print $$1}') && kubectl port-forward $${POD_NAME} 5000:5000 -n default
