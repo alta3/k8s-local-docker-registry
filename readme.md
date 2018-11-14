@@ -41,8 +41,8 @@ Then use the address/port
 Check if the registry catalog can be accessed and the ability to push an image.
 
     ```
-    set -x && curl -X GET http://127.0.0.1:30500/v2/_catalog && sudo docker pull busybox && sudo docker tag busybox 127.0.0.1:30500/busybox && sudo docker push 127.0.0.1:30500/busybox
-    curl -X GET --cacert ~/k8s-certs/ca.pem https://127.0.0.1:30500/v2/_catalog
+    curl -X GET http://127.0.0.1:30500/v2/_catalog && sudo docker pull busybox && sudo docker tag busybox 127.0.0.1:30500/busybox && sudo docker push 127.0.0.1:30500/busybox
+    curl -X GET https://127.0.0.1:30500/v2/_catalog
     ```
 
 ## Example Build and Deployment
